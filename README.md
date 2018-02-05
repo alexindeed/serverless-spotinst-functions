@@ -4,7 +4,7 @@ Spotinst Functions is a Multi-Cloud Functions-as-a-Service (FaaS) platform that 
 Functions are independent units of deployment, like microservices. They are code deployed and the cloud written to perform a specific job. 
 
 ## Getting Started
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system. For more information, please see the Serverless [provider documentation.](https://serverless.com/framework/docs/providers/spotinst/) for Spotinst.
 
 ### Prerequisites
 You will need a Spotinst Account and Spotinst API token to complete setup. [Sign up for a Spotinst Account here.](https://console.spotinst.com/?utm_source=website&utm_medium=header#/auth/signUp "Spotinst Signup")
@@ -82,6 +82,15 @@ To use the Spotinst Console, select the function from within the Application and
 Additionally, if you change the access parameter to 'public' in your function's serverless.yml file, you can invoke your function using the generated HTTP endpoint, found under the 'Triggers' tab in the Console. Also under 'Triggers' is the ability to add a CRON trigger for running the function at a regular interval.
 
 ![img](https://i.imgur.com/gq09YbGl.png)
+
+## Logs
+Logs are viewable in the 'Logs' section of each function on the Spotinst Console. There is a small time lag between function invokation and logs appearing in the list.
+
+You can see the logs for a given function from the command line. Use the --startTime option to denote a unit of time.
+```
+serverless logs -f hello --StartTime 3h
+```
+This command will show you the past 3 hours worth of logs for the function *hello*.
 
 ## Cleanup
 If you no longer need your service, run the remove command to ensure you don't incur any unexpected charges:
