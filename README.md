@@ -9,12 +9,12 @@ These instructions will get you a copy of the project up and running on your loc
 ### Prerequisites
 You will need a Spotinst Account and Spotinst API token to complete setup. [Sign up for a Spotinst Account here.](https://console.spotinst.com/?utm_source=website&utm_medium=header#/auth/signUp "Spotinst Signup")
 You can create your API token by navigating to My Account>API and selecting generate token.
+*Note: You only need to set up your credentials once.*
 
 ![img](https://i.imgur.com/e8wz1uRm.png) 
 
 ![img](https://i.imgur.com/GYLkNvnl.png)
 
-*Note: You only need to set up your credentials once.*
 
 ### Installing
 First, install the serverless framework.
