@@ -9,6 +9,9 @@ These instructions will get you a copy of the project up and running on your loc
 ### Prerequisites
 You will need a Spotinst Account and Spotinst API token to complete setup. [Sign up for a Spotinst Account here.](https://console.spotinst.com/?utm_source=website&utm_medium=header#/auth/signUp "Spotinst Signup")
 You can create your API token by navigating to My Account>API and selecting generate token.
+![img](https://i.imgur.com/e8wz1uRm.png) 
+
+![img](https://i.imgur.com/GYLkNvnl.png)
 
 *Note: You only need to set up your credentials once.*
 
@@ -41,6 +44,8 @@ You should see the account ID and token.
 Deploying a project places it into production and allows you to see and edit it in the Spotinst Console. In order to deploy, you will need to associate the function with an environment in the Spotinst Console. The environment ID can be found on the Spotinst Console under Functions. In this menu you will be able to add applications, environments, and functions. An application is a collection of one or more environments, and an environment is a collection of one or more functions. Use this structure to organize projects in a way that best suits your needs.
 
 Select the application and environment to see the environment ID. Copy-paste this ID into your severless.yml file. Don't forget to change your function name before deploying!
+
+![img](https://i.imgur.com/BrQrmFyl.png)
 ```
 service: your-service
 
@@ -74,6 +79,8 @@ serverless invoke -f hello
 To use the Spotinst Console, select the function from within the Application and Environment menu and click 'run test' from the 'Test' tab. 
 
 Additionally, if you change the access parameter to 'public' in your function's serverless.yml file, you can invoke your function using the generated HTTP endpoint, found under the 'Triggers' tab in the Console. Also under 'Triggers' is the ability to add a CRON trigger for running the function at a regular interval.
+
+![img](https://i.imgur.com/gq09YbGl.png)
 
 ## Cleanup
 If you no longer need your service, run the remove command to ensure you don't incur any unexpected charges:
