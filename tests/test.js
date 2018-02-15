@@ -2,18 +2,21 @@ const assert = require('chai').assert;
 const should = require('chai').should();
 const expect = require('chai').expect;
 
+const LogsObject = require('../logs/index');
 const Serverless = require('serverless');
 const path = __dirname + "/fixtures/test_function";
 
+const options = {
+  "stage": "dev",
+  "region": "test_region" };
 
 describe('Basic tests', () => {
   it('example test', () => {
     const serverless = new Serverless({"servicePath":"/Users/alex/Documents/Programming/serverless-spotinst-functions/tests/fixtures/test_function"});
-
+    const spotinstLogs = new SpotinstLogs(serverless,options);
     
     assert.equal(1,1);
-    console.log(serverless);
-    
+    console.log(spotinstLogs);
   })
 });
 
