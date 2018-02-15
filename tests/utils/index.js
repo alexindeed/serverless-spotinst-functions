@@ -7,7 +7,7 @@ const BbPromise = require('bluebird');
 const fse = require('fs-extra');
 const execSync = require('child_process').execSync;
 const AWS = require('aws-sdk');
-// mock to test functionality bound to a serverless plugin
+// mock to test_function functionality bound to a serverless plugin
 class ServerlessPlugin {
   constructor(serverless, options, testSubject) {
     this.options = options;
@@ -37,7 +37,7 @@ module.exports = {
     const serviceName = `test-${hrtime[0]}-${hrtime[1]}`;
     const tmpDir = path.join(os.tmpdir(),
       'tmpdirs-serverless',
-      'integration-test-suite',
+      'integration-test_function-suite',
       crypto.randomBytes(8).toString('hex'));
     fse.mkdirsSync(tmpDir);
     process.chdir(tmpDir);

@@ -9,9 +9,9 @@ describe('SpotinstPlugin', () => {
     const serverless = new Serverless();
     const options = {
       stage: 'production',
-      region: 'my-test-region',
+      region: 'my-test_function-region',
     };
-    const functionUnderTest = () => BbPromise.resolve('function under test');
+    const functionUnderTest = () => BbPromise.resolve('function under test_function');
     const spotinstPlugin = new SpotinstPlugin(
       serverless,
       options,

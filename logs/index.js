@@ -32,6 +32,8 @@ class SpotinstLogs extends LocalFunctionsMapper {
  
 	logs(){
 		let localFuncs = this.getLocalFunctions();
+		console.log("localFuncs:\n");
+		console.log(localFuncs);
 
 		this.serverless.cli.consoleLog(chalk.yellow.underline('Function Logs'));
 		if(localFuncs[`${this.options.function}-${this.options.stage}`]){

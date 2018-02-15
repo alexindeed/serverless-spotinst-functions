@@ -4,10 +4,10 @@ node_js:
 notifications:
   email: "false"
 before_script:
-  - sls create -t spotinst-nodejs -p ../test
-  - npm link && cd ../test && npm link serverless-spotinst-functions
+  - sls create -t spotinst-nodejs -p ../test_function
+  - npm link && cd ../test_function && npm link serverless-spotinst-functions
   - npm i serverless -s
   - serverless config credentials -p spotinst -t ${token} -a ${account}
   - cd ../serverless-spotinst-functions
 script:
-  - npm test
+  - npm test_function
