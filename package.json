@@ -4,12 +4,13 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "mocha tests/test.js"
+    "test": "mocha tests/logs_tests.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "adm-zip": "^0.4.7",
+    "bluebird": "^3.5.1",
     "chalk": "^2.1.0",
     "js-yaml": "^3.9.1",
     "lodash": "^4.17.4",
@@ -19,6 +20,8 @@
   },
   "devDependencies": {
     "chai": "^4.1.2",
-    "mocha": "^5.0.0"
+    "chai-as-promised": "^7.1.1",
+    "mocha": "^5.0.0",
+    "sinon": "^4.3.0"
   }
 }

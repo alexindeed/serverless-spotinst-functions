@@ -60,7 +60,8 @@ class SpotinstLogs extends LocalFunctionsMapper {
 			});
 
 		} else {
-			this.serverless.cli.consoleLog(`    Function Not Found`);
+//			this.serverless.cli.consoleLog(`    Function Not Found`);
+			console.log('in: logs/index.js - function not found');
 		}
 	}
 
