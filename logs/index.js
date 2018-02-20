@@ -36,6 +36,7 @@ class SpotinstLogs extends LocalFunctionsMapper {
 		this.serverless.cli.consoleLog(chalk.yellow.underline('Function Logs'));
 		if(localFuncs[`${this.options.function}-${this.options.stage}`]){
 			const selectedFunc = localFuncs[`${this.options.function}-${this.options.stage}`];
+			console.log(selectedFunc);
 			let messages = [];
 
 			let params = this.buildFunctionParams(selectedFunc.name, selectedFunc.id);
@@ -60,8 +61,8 @@ class SpotinstLogs extends LocalFunctionsMapper {
 			});
 
 		} else {
-//			this.serverless.cli.consoleLog(`    Function Not Found`);
-			console.log('in: logs/index.js - function not found');
+			this.serverless.cli.consoleLog(`    Function Not Found`);
+//			console.log('in: logs/index.js - function not found');
 		}
 	}
 
@@ -101,8 +102,9 @@ class SpotinstLogs extends LocalFunctionsMapper {
 
 		} else {
 			// If the user gave formatted timeframe
-			if(timeBase)
-				return new Date(Date.now() - time*timeBase);
+			if(timeBase) {
+        return new Date(Date.now() - time*timeBase);
+			}
 
 			// If the user gave us a specific timestamp
 			else
