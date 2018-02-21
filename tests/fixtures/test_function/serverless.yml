@@ -20,7 +20,11 @@ provider:
     environment: env-fa1c3fab # NOTE: Remember to add the environment ID
 
 functions:
+<<<<<<< HEAD
   test_CI:
+=======
+  test_function:
+>>>>>>> test2
     runtime: nodejs8.3
     handler: handler.main
     memory: 128
