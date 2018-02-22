@@ -13,7 +13,6 @@ const chalk = require('chalk');
 const moment = require('moment');
 
 require('chai').use(chaiAsPromised);
-chai.use(require('chai-datetime'));
 
 const SpotinstLogs = require('../logs/index.js');
 //const Credentials = require('../credentials');
@@ -75,6 +74,7 @@ describe('SpotinstLogs', () => {
     
     it('should give a stub local func', () => {
       console.log(spotinstLogs.serverless.service);
+      assert.equal(spotinstLogs.serverless.service.)
     });
     
 //    it('should show the logs object', () => {
@@ -122,9 +122,12 @@ describe('SpotinstLogs', () => {
       assert.throws(()=> {spotinstLogs.getStartTime('dim sum')},Error,`Incorrect Time Syntax`);
     });
   
-    it('should return new Date', function() {
-      let d1 = spotinstLogs.getStartTime('6000d');
-      let d2 = Date.now();
+    it('date should exist', function() {
+      //todo: test that it actually returns a date
+      let date = spotinstLogs.getStartTime('6000d');
+      console.log(typeof date);
+      assert.exists(date);
+    
       
     });
   });
